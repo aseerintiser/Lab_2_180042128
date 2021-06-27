@@ -1,5 +1,5 @@
 const getLoginPage = (req, res) => {
-    res.send("Love RobIbtid from Controller");
-}
+    res.sendFile("login.html", { root: "./views/pages/examples" });
+  };
 
 module.exports = {getLoginPage};

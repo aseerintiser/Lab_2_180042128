@@ -4,6 +4,10 @@ const alert = require('alert');
 const LocalStorage = require("node-localstorage").LocalStorage;
 localStorage = new LocalStorage("./scratch");
 
+const getLandingPage = (req, res) => {
+  res.sendFile("starter.html", { root: "./views" });
+};
+
 const getLoginPage = (req, res) => {
     res.sendFile("login.html", { root: "./views/pages/examples" });
   };
@@ -77,4 +81,8 @@ const postLoginPage = async (req, res) => {
   }
 };
 
-module.exports = {getLoginPage, getRegisterPage, postRegisterPage, postLoginPage};
+const getDashboardPage = (req, res) => {
+  res.sendFile("index3.html", { root: "./views" });
+};
+
+module.exports = {getLandingPage, getLoginPage, getRegisterPage, postRegisterPage, postLoginPage, getDashboardPage};

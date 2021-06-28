@@ -1,2 +1,9 @@
 /node_modules
 /public/plugins
+/public/dist
+/views/dist
+/views/docs
+/views/pages
+/views/plugins
+/views/build
+.env
